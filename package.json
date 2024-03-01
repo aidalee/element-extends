@@ -2,7 +2,6 @@
   "version": "1.0.0-alpha.1709289037503",
   "private": true,
   "scripts": {
-    "build:components": "node build/lib.config.js",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "build:docs": "vite build --config build/docs.config.js",
