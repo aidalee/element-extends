@@ -1,6 +1,6 @@
 {
   "name": "@soterea-f2e/utils",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1709289037503",
   "description": "utils of soterea",
   "module": "es/index.js",
   "main": "lib/index.js",

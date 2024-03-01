@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1709289037503",
   "private": true,
   "scripts": {
     "build:components": "node build/lib.config.js",

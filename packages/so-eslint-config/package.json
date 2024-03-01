@@ -1,6 +1,6 @@
 {
   "name": "@soterea-f2e/eslint-config",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1709289037503",
   "description": "eslint config",
   "main": "index.js",
   "keywords": [
