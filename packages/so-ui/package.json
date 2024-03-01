@@ -1,6 +1,6 @@
 {
   "name": "@soterea-f2e/so-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Vue3 component extends elementUI",
   "module": "es/index.js",
   "main": "lib/index.js",

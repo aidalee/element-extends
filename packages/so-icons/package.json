@@ -1,6 +1,6 @@
 {
   "name": "@soterea-f2e/icons",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "soterea icons",
   "main": "./src/config.js",
   "types": "./src/config.d.ts",

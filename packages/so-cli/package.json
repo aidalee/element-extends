@@ -1,6 +1,6 @@
 {
   "name": "@soterea-f2e/cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "cli of so",
   "bin": {
     "so-cli": "./lib/bin.js"
