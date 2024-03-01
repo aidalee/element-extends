@@ -1,0 +1,9 @@
+lib
+examples/dist
+packages/so-cli/lib/**
+packages/so-ui/lib/**
+packages/so-ui/es/**
+packages/so-ui/umd/**
+packages/so-ui/types/index.d.ts
+packages/so-ui/components/test/**
+packages/so-cli

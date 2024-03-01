@@ -1,0 +1,51 @@
+{
+  "name": "@soterea-f2e/so-ui",
+  "version": "1.0.0",
+  "description": "Vue3 component extends elementUI",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "so-cli compile"
+  },
+  "files": [
+    "lib",
+    "es",
+    "umd",
+    "types"
+  ],
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "es/style.js",
+    "lib/style.js",
+    "*.css"
+  ],
+  "keywords": [],
+  "author": "please",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/helper-plugin-utils": "7.19.0",
+    "@babel/preset-env": "7.19.4",
+    "@soterea-f2e/cli": "workspace:*",
+    "@soterea-f2e/utils": "workspace:*",
+    "axios": "^1.6.7",
+    "element-plus": "^2.5.6",
+    "throttle-debounce": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.20.5",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "18.7.18",
+    "@types/throttle-debounce": "^5.0.2",
+    "@vue/runtime-core": "^3.4.20",
+    "lodash": "^4.17.21",
+    "node-sass": "^9.0.0",
+    "sass": "^1.71.1",
+    "scss": "^0.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vue": "^3.4.20"
+  }
+}

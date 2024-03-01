@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    // "skipLibCheck": true,
+    "types": ["vitest/globals"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "build/**/*.ts",
+    "packages/so-ui/components/**/*.ts",
+    "packages/so-ui/components/**/*.ts",
+    "packages/so-ui/components/**/*.d.ts",
+    "packages/so-ui/components/**/*.tsx",
+    "packages/so-ui/components/**/*.vue"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+  

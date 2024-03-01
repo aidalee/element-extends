@@ -1,0 +1,16 @@
+{
+  "name": "@soterea-f2e/stylelint-config",
+  "version": "1.0.0",
+  "description": "stylelint config of soterea",
+  "main": "index.js",
+  "keywords": [
+    "stylelint",
+    "soterea-f2e"
+  ],
+  "author": "please",
+  "license": "MIT",
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

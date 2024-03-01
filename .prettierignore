@@ -1,0 +1,12 @@
+packages/so-cli/lib/**
+
+packages/so-ui/es/**
+packages/so-ui/lib/**
+packages/so-ui/umd/**
+packages/so-ui/types/index.d.ts
+
+**/package.json
+*.md
+
+pnpm-lock.yaml
+pnpm-workspace.yaml

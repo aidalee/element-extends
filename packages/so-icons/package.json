@@ -1,0 +1,13 @@
+{
+  "name": "@soterea-f2e/icons",
+  "version": "1.0.0",
+  "description": "soterea icons",
+  "main": "./src/config.js",
+  "types": "./src/config.d.ts",
+  "files": [
+    "src"
+  ],
+  "keywords": [],
+  "author": "please",
+  "license": "MIT"
+}
