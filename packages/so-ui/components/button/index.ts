@@ -1,12 +1,10 @@
 import type { App } from 'vue'
 import Button from './button'
 
-// 具名导出
-export { Button }
-
-// 导出插件
-export default {
-  install(app: App) {
-    app.component(Button.name, Button)
-  }
+Button.install = function (app: App) {
+  app.component(Button.name as string, Button)
 }
+
+export const _FabComponent = Button
+
+export default Button

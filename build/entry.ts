@@ -2,13 +2,14 @@
  * @Author: please
  * @Date: 2024-02-29 16:47:13
  * @LastEditors: please
- * @LastEditTime: 2024-02-29 16:51:20
+ * @LastEditTime: 2024-03-01 18:20:24
  * @Description: 请填写简介
  */
 // 入口文件
 // 1. 引入已实现的组件批量导出去
 import type { App } from 'vue'
-import ButtonPlugin, { Button } from '../packages/so-ui/components/button'
+import ButtonPlugin from '../packages/so-ui/components/button'
+import Button from '../packages/so-ui/components/button'
 const version = require('../package.json').version
 
 // 2. 导出这些组件

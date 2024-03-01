@@ -120,10 +120,8 @@ const buildLib = async () => {
   // 按需打包
   fs.readdirSync(componentsDir)
     .filter(name => {
-      console.log(name, '=====')
       // 只找目录不找文件（排除组件文件夹以外的其他文件），且里面包含index.ts
       const componentDir = path.resolve(componentsDir, name)
-      console.log(componentDir, 'dir')
       const isDir = fs.lstatSync(componentDir).isDirectory()
       return isDir && fs.readdirSync(componentDir).includes('index.ts')
     })
