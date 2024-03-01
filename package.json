@@ -10,9 +10,6 @@
     "lint": "eslint . --ext .js,.ts,.tsx,.vue",
     "release": "node build/publish.mjs && so-cli release"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "execa": "5.0.0",
