@@ -13,9 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "@soterea-f2e/so-ui": "workspace:^",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vueuse/core": "^10.9.0",
+    "element-plus": "^2.5.6",
     "markdown-it": "^14.0.0",
     "seemly": "^0.3.8",
     "vue": "^3.4.20",

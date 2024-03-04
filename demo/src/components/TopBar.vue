@@ -1,20 +1,17 @@
+<!--
+ * @Author: please
+ * @Date: 2024-02-29 17:55:03
+ * @LastEditors: please
+ * @LastEditTime: 2024-03-04 16:45:08
+ * @Description: 请填写简介
+-->
 <script lang="ts" setup>
 defineOptions({
   name: 'TopBar'
 })
 
-const Links = {
-  home: 'http://www.huohuo90.com',
-  github: 'https://github.com/ecaps1038/yike-design-dev',
-  devStandard: 'https://dwawvfgxvzk.feishu.cn/wiki/GraewTYxJidb6dkeV5ycjGG4nHb',
-  task: 'https://dwawvfgxvzk.feishu.cn/wiki/T8D3w5VqbinQr5kLNoVcrDQKnbg?table=tblT9WqhCE0EWKfP&view=vewXxBNTOK',
-  design:
-    'https://www.figma.com/file/EMPOindzRJTKt1Gx6Egojq/Yike-design?type=design&node-id=0%3A278&mode=design&t=buLeC3MzFSkXagtR-1'
-}
-
 const navLinks = {
-  '/develop': '开发',
-  '/design': '设计',
+  '/develop': '指南',
   '/module': '组件'
 }
 const isDev = import.meta.env.DEV
@@ -23,34 +20,9 @@ const isDev = import.meta.env.DEV
 <template>
   <div class="top-bar">
     <router-link class="logo" to="/">
-      <img src="@/assets/svgs/logo.svg" />
-      <IconYkdesignFill class="name" />
-      <yk-tag v-if="isDev" type="primary">DEV</yk-tag>
+      <span>Element extends</span>
     </router-link>
-    <yk-space class="nav-links" :size="24" align="center">
-      <a
-        v-if="isDev"
-        class="nav-item responsive-hidden"
-        :href="Links.design"
-        target="_blank"
-      >
-        UI 设计稿
-      </a>
-      <a
-        v-if="isDev"
-        class="nav-item responsive-hidden"
-        :href="Links.task"
-        target="_blank"
-      >
-        任务文档
-      </a>
-      <a
-        class="nav-item responsive-hidden"
-        :href="Links.devStandard"
-        target="_blank"
-      >
-        开发规范
-      </a>
+    <div class="nav-links">
       <router-link
         v-for="(link, path) in navLinks"
         :key="path"
@@ -59,15 +31,7 @@ const isDev = import.meta.env.DEV
       >
         {{ link }}
       </router-link>
-
-      <a class="nav-item responsive-hidden" :href="Links.home" target="_blank">
-        主站
-      </a>
-      <a class="nav-item" :href="Links.github" target="_blank">
-        <icon-github-fill />
-      </a>
-      <a class="nav-item"><yk-theme /></a>
-    </yk-space>
+    </div>
   </div>
 </template>
 
@@ -81,13 +45,11 @@ const isDev = import.meta.env.DEV
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
 
   width: 100%;
   height: var(--top-bar-height);
-  // border-bottom: 1px solid $line-color-s;
-  // background-color: $bg-color-l;
-  // transition: all $animats;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 
   a {
     display: flex;
@@ -117,12 +79,10 @@ const isDev = import.meta.env.DEV
     height: 18px;
     // color: @font-color-l !important;
   }
-
-  .yk-tag {
-    vertical-align: text-top;
-  }
 }
-
+.nav-links {
+  display: flex;
+}
 .nav-item {
   padding: 5px 8px;
   border-radius: 4px;
@@ -132,23 +92,6 @@ const isDev = import.meta.env.DEV
 
   .nav-item:hover {
     font-weight: 500;
-  }
-}
-
-/* stylelint-disable-next-line media-feature-range-notation */
-@media (max-width: 810px) {
-  .responsive-hidden {
-    display: none !important;
-  }
-
-  .logo {
-    .name {
-      display: none;
-    }
-  }
-
-  .nav-links {
-    gap: 8px !important;
   }
 }
 </style>

@@ -61,7 +61,7 @@ export default () => ({
             ${importContent}
           </script>
           <template>
-            <div class='yk-demo-doc'>
+            <div class='so-demo-doc'>
               ${markdownIt.render(src)}
             </div>
           </template>`,

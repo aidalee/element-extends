@@ -3,16 +3,14 @@ import type { RouteRecordRaw } from 'vue-router'
 import navs from '@/router/config/components.json'
 
 import generalRoutes from './modules/general'
-import feedbackRoutes from './modules/feedback'
 import developRoutes from './modules/develop'
-import designRoutes from './modules/design'
 
 const compModelRoute: RouteRecordRaw = {
   path: '/module',
   name: 'module',
   redirect: '/module/button',
   component: () => import('@/views/Modules.vue'),
-  children: [...generalRoutes, ...feedbackRoutes],
+  children: [...generalRoutes],
   meta: {
     navs
   }
@@ -28,7 +26,6 @@ const router = createRouter({
     },
     compModelRoute,
     developRoutes,
-    designRoutes,
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',

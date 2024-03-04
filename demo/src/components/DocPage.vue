@@ -13,7 +13,7 @@ const hasNavBar = inject<Ref>('hasNavBar')
 onMounted(() => {
   const docNode = docRef.value
   const wrapperNode = docNode.children[0] as HTMLElement
-  const docH3es = wrapperNode.querySelectorAll('h3.yk-title[id]')
+  const docH3es = wrapperNode.querySelectorAll('h3.so-title[id]')
 
   Array.from(docH3es).forEach((el: HTMLElement) => {
     anchors.value.push({
@@ -25,7 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="docRef" class="yk-demo-doc" :class="{ width1200: !hasNavBar }">
+  <div ref="docRef" class="so-demo-doc" :class="{ width1200: !hasNavBar }">
     <div ref="wrapperRef" class="wrapper">
       <slot />
     </div>
@@ -36,7 +36,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-.yk-demo-doc {
+.so-demo-doc {
   --anchor-width: 212px;
   flex: 1;
   padding: 32px 64px;

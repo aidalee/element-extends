@@ -2,7 +2,7 @@
  * @Author: please
  * @Date: 2024-02-29 17:55:03
  * @LastEditors: please
- * @LastEditTime: 2024-03-01 10:14:08
+ * @LastEditTime: 2024-03-04 15:51:22
  * @Description: 请填写简介
 -->
 <script setup lang="ts">
@@ -13,7 +13,7 @@ import type { NavBar } from '@/utils/types'
 const route = useRoute()
 const navs = computed(() => (route.meta.navs as NavBar[]) || [])
 const hasNavBar = ref(navs.value.length > 0)
-
+console.log(navs, 'navs')
 provide('hasNavBar', hasNavBar)
 </script>
 
@@ -23,7 +23,6 @@ provide('hasNavBar', hasNavBar)
     <nav-bar :data="navs" />
     <router-view />
   </div>
-  <!-- <yk-back-top></yk-back-top> -->
 </template>
 
 <style scoped>

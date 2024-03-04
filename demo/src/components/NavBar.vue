@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import type { NavBar } from '@/utils/types'
 import { computed, ref } from 'vue'
+defineOptions({ name: 'NavBar' })
 
-defineProps({
+const props = defineProps({
   data: {
     type: Array<NavBar>,
     required: true
@@ -16,18 +17,19 @@ const navbarClass = computed(() => {
     'nav-bar-show': !isCollapsed.value
   }
 })
+console.log(props.data, 'data..')
 </script>
 
 <template>
   <div :class="navbarClass">
     <div class="nav-bar-toggle" @click="isCollapsed = !isCollapsed">
-      <IconCollapseOutline v-if="!isCollapsed" />
-      <IconExpandOutline v-else />
+      <!-- <IconCollapseOutline v-if="!isCollapsed" />
+      <IconExpandOutline v-else /> -->
     </div>
-    <YkScrollbar v-if="data.length">
+    <el-scrollbar>
       <div v-for="navBar of data" :key="navBar.title" class="nav-bar-item">
         <div class="nav-bar-title">
-          <yk-text strong>{{ navBar.title }}</yk-text>
+          <el-text>{{ navBar.title }}</el-text>
         </div>
         <router-link
           v-for="item in navBar.list"
@@ -38,7 +40,7 @@ const navbarClass = computed(() => {
           {{ item.name }}
         </router-link>
       </div>
-    </YkScrollbar>
+    </el-scrollbar>
   </div>
 </template>
 
@@ -50,17 +52,15 @@ const navbarClass = computed(() => {
 
   min-width: var(--nav-bar-width);
   height: calc(100vh - var(--top-bar-height));
-  // border-right: 1px solid $line-color-s;
-  // background-color: $bg-color-l;
-  // transition: background-color $animats;
+  border-right: 1px solid #eee;
   box-sizing: border-box;
 
   /* stylelint-disable-next-line selector-class-pattern */
-  ::v-deep(.yk-scrollbar__wrap) {
+  ::v-deep(.so-scrollbar__wrap) {
     padding-bottom: 64px;
   }
 
-  .yk-scrollbar {
+  .so-scrollbar {
     // padding: 0 @space-l;
   }
 
@@ -106,8 +106,8 @@ const navbarClass = computed(() => {
 
   display: none;
   padding: 6px 12px;
-  border: 1px solid @gray-1;
-  border-radius: 0 @radius-s @radius-s 0;
+  // border: 1px solid @gray-1;
+  // border-radius: 0 @radius-s @radius-s 0;
   background: rgba(255 255 255 / 10%);
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-backdrop-filter: blur(5px);
@@ -120,7 +120,7 @@ const navbarClass = computed(() => {
     position: fixed;
     z-index: 120;
     transform: translateX(calc(0px - var(--nav-bar-width)));
-    transition: transform @animats;
+    // transition: transform @animats;
   }
 
   .nav-bar-toggle {

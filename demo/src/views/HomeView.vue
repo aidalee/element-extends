@@ -1,3 +1,10 @@
+<!--
+ * @Author: please
+ * @Date: 2024-02-29 17:55:03
+ * @LastEditors: please
+ * @LastEditTime: 2024-03-04 16:02:50
+ * @Description: 请填写简介
+-->
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 
@@ -9,34 +16,26 @@ const goPage = (path: string) => router.push({ path })
   <div class="main">
     <!-- Logo -->
     <div class="logo-box">
-      <IconLogoBackup5Fill class="bg-logo" />
-      <div class="logo">
-        <IconYikenameFill class="yike" />
-        <IconDesignFill class="design" />
-      </div>
-      <p class="slogan">包容万物，从源头出发，一切从简</p>
+      <p class="slogan">业务组件库封装</p>
     </div>
 
     <!-- start -->
     <div class="start-btns">
-      <yk-button size="l" @click="goPage('develop')">开始使用</yk-button>
-      <yk-button type="secondary" size="l" @click="goPage('design')">
-        设计文件
-      </yk-button>
+      <so-button type="primary" @click="goPage('develop')">开始使用</so-button>
     </div>
   </div>
 
-  <div class="footer">
-    <IconYike1Outline class="sign" />
-    <img src="@/assets/svgs/bg-round.svg" draggable="false" />
-  </div>
+  <!-- <div class="footer"></div> -->
 </template>
 
 <style lang="scss" scoped>
 .main {
-  padding: 128px 40px 0;
+  // padding: 128px 40px 0;
+  width: 100%;
   height: 100vh;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-box {
@@ -62,12 +61,6 @@ const goPage = (path: string) => router.push({ path })
     gap: 72px;
     padding: 32px 0;
     transition: all 0.2s;
-
-    .yike,
-    .design {
-      width: auto;
-      height: 58px;
-    }
   }
 
   .slogan {
@@ -77,12 +70,11 @@ const goPage = (path: string) => router.push({ path })
 }
 
 .start-btns {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   margin-top: 32px;
-  text-align: center;
-
-  button:first-child {
-    margin-right: 12px;
-  }
+  width: 200px;
 }
 
 .footer {
@@ -90,55 +82,5 @@ const goPage = (path: string) => router.push({ path })
   bottom: 0;
   width: 100%;
   height: 220px;
-
-  .sign {
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    width: 52px;
-    height: 52px;
-    transform: translateX(-50%);
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-    user-select: none;
-  }
-}
-
-@media (width <= 768px) {
-  .logo-box {
-    .bg-logo {
-      display: none;
-    }
-
-    .logo {
-      flex-direction: column;
-      gap: 24px;
-
-      .yike,
-      .design {
-        height: 40px;
-      }
-    }
-  }
-
-  .start-btns {
-    margin-top: 0;
-  }
-}
-
-@media (width <= 600px) {
-  .logo-box,
-  .start-btns {
-    text-align: left;
-
-    .logo {
-      align-items: flex-start;
-    }
-  }
 }
 </style>

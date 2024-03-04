@@ -2,7 +2,7 @@
  * @Author: please
  * @Date: 2024-02-29 17:55:03
  * @LastEditors: please
- * @LastEditTime: 2024-02-29 19:04:22
+ * @LastEditTime: 2024-03-04 16:34:34
  * @Description: 请填写简介
 -->
 <script setup lang="ts">
@@ -20,7 +20,7 @@ const goPage = (path: string) => router.push({ path })
     </div>
 
     <!-- back to home -->
-    <yk-button size="l" @click="goPage('/')">回到主页</yk-button>
+    <so-button type="primary" @click="goPage('/')">回到主页</so-button>
   </div>
 
   <div class="footer">

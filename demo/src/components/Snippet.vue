@@ -2,7 +2,7 @@
 import { ref, getCurrentInstance } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { getHighlighter } from 'shikiji'
-
+import { CopyDocument, View } from '@element-plus/icons-vue'
 defineOptions({ name: 'SoSnippet' })
 
 const { copy } = useClipboard()
@@ -56,22 +56,24 @@ function onCopy() {
   <div class="demo-block">
     <slot name="demo"></slot>
   </div>
-  <yk-space class="flex-end" :size="8">
-    <div class="icon" @click="onCopy"><icon-copy-outline /></div>
+  <el-space class="flex-end" :size="8">
+    <div class="icon" @click="onCopy">
+      <el-icon><CopyDocument /></el-icon>
+    </div>
     <div
       class="icon"
       :class="{ active: showCode }"
       @click="showCode = !showCode"
     >
-      <icon-code-outline />
+      <el-icon><View /></el-icon>
     </div>
-  </yk-space>
+  </el-space>
 
   <div v-show="showCode" v-html="html"></div>
 </template>
 
 <style scoped lang="scss">
-.yk-title {
+.so-title {
   &:hover::after {
     opacity: 1;
   }
@@ -79,7 +81,6 @@ function onCopy() {
   &::after {
     content: '#';
     margin-left: 12px;
-    color: rgb(var(--lcolor));
     opacity: 0;
     vertical-align: bottom;
     transition: opacity 0.2s;
@@ -91,7 +92,6 @@ function onCopy() {
   padding: 20px;
   border: 1px solid #eee;
   border-radius: 10px;
-  // transition: all @animats;
 }
 
 .flex-end {
@@ -105,32 +105,15 @@ function onCopy() {
     width: 28px;
     height: 28px;
     border-radius: 10;
-    color: #ddd;
-    background-color: #ddd;
-    // transition: all @animats;
+    color: #1e2025;
+    background-color: #f8f8f8;
     cursor: pointer;
 
     &:hover {
-      background-color: #eee;
-    }
-
-    .yk-icon {
-      font-size: 20;
-      color: #ddd;
-      // transition: all @animats;
     }
   }
 
   .active {
-    // background-color: @font-color-l;
-
-    &:hover {
-      // background-color: @font-color-l;
-    }
-
-    .yk-icon {
-      // color: @bg-color-l;
-    }
   }
 }
 </style>
