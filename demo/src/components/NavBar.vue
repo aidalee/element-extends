@@ -60,14 +60,14 @@ console.log(props.data, 'data..')
     padding-bottom: 64px;
   }
 
-  .so-scrollbar {
-    // padding: 0 @space-l;
+  .el-scrollbar {
+    padding: 0 16px;
   }
 
   .router-link-active {
     font-weight: bold;
-    // color: @pcolor;
-    // background-color: @pcolor-1;
+    color: rgba(43, 90, 237, 1);
+    background-color: rgba(43, 90, 237, 0.08);
   }
 }
 
