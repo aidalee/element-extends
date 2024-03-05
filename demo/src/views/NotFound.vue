@@ -23,10 +23,7 @@ const goPage = (path: string) => router.push({ path })
     <so-button type="primary" @click="goPage('/')">回到主页</so-button>
   </div>
 
-  <div class="footer">
-    <IconYike1Outline class="sign" />
-    <img src="@/assets/svgs/bg-round.svg" draggable="false" />
-  </div>
+  <div class="footer"></div>
 </template>
 
 <style lang="scss" scoped>

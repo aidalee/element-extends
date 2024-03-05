@@ -1,10 +1,3 @@
-/*
- * @Author: please
- * @Date: 2024-02-29 16:47:13
- * @LastEditors: please
- * @LastEditTime: 2024-02-29 17:01:17
- * @Description: 请填写简介
- */
 import execa from 'execa'
 import ora from 'ora'
 import { resolve } from 'path'

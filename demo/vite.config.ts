@@ -8,9 +8,7 @@
 import { defineConfig } from 'vite'
 import createVuePlugin from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-// import vitePluginMarkdown from './plugins/vite-plugin-md'
 import Components from 'unplugin-vue-components/vite'
-// import Resolver from './plugins/resolver'
 import vitePluginMarkdown from './plugins/vite-plugin-md.ts'
 import { join } from 'path'
 
@@ -31,22 +29,12 @@ export default defineConfig({
       }
     }),
     vueJsx()
-    // Components({
-    //   dirs: [
-    //     './src/components',
-    //     './src/views',
-    //     '@soterea-f2e/so-ui/components'
-    //   ],
-    //   resolvers: [Resolver]
-    // })
   ],
   css: {
     // css预处理器
     preprocessorOptions: {
       scss: {
         charset: false
-        // additionalData:
-        //   '@import (reference) "@yike-design/ui/src/components/styles/index.scss";'
       }
     }
   },

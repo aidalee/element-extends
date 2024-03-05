@@ -11,9 +11,6 @@ import router from './router'
 import Snippet from './components/Snippet.vue'
 import DocTitle from './components/DocTitle.vue'
 
-// import ColorCard from './components/ColorCard.vue'
-// import DocPage from './components/DocPage.vue'
-
 // 加载项目全局样式
 import '@/style/main.scss'
 

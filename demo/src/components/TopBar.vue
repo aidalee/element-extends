@@ -11,7 +11,7 @@ defineOptions({
 })
 
 const navLinks = {
-  '/develop': '指南',
+  '/': '指南',
   '/module': '组件'
 }
 const isDev = import.meta.env.DEV
@@ -20,7 +20,7 @@ const isDev = import.meta.env.DEV
 <template>
   <div class="top-bar">
     <router-link class="logo" to="/">
-      <span>Element extends</span>
+      <span>UI Coms</span>
     </router-link>
     <div class="nav-links">
       <router-link
@@ -41,11 +41,11 @@ const isDev = import.meta.env.DEV
   top: 0;
   left: 0;
   z-index: 99;
-
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  box-sizing: border-box;
   width: 100%;
   height: var(--top-bar-height);
   background: #fff;

@@ -4,8 +4,6 @@
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "build:docs": "vite build --config build/docs.config.js",
-    "dev:docs": "vite serve examples --config build/example.config.js",
     "lint": "eslint . --ext .js,.ts,.tsx,.vue",
     "release": "node build/publish.mjs && so-cli release"
   },

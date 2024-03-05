@@ -19,13 +19,13 @@ const compModelRoute: RouteRecordRaw = {
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('@/views/HomeView.vue')
-    },
-    compModelRoute,
+    // {
+    //   path: '/',
+    //   name: 'home',
+    //   component: () => import('@/views/HomeView.vue')
+    // },
     developRoutes,
+    compModelRoute,
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',

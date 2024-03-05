@@ -8,16 +8,10 @@
 import { RouteRecordRaw } from 'vue-router'
 
 const developRoutes: RouteRecordRaw = {
-  path: '/develop',
-  name: 'develop',
-  redirect: '/develop/getting-started',
-  component: () => import('@/views/develop/getting-started.md'),
-  children: [
-    {
-      path: 'getting-started',
-      component: () => import('@/views/develop/getting-started.md')
-    }
-  ]
+  path: '/',
+  name: 'getting-started',
+  // redirect: '/develop/getting-started',
+  component: () => import('@/views/develop/getting-started.md')
 }
 
 export default developRoutes

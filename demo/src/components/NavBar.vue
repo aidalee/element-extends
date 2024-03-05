@@ -68,6 +68,7 @@ console.log(props.data, 'data..')
     font-weight: bold;
     color: rgba(43, 90, 237, 1);
     background-color: rgba(43, 90, 237, 0.08);
+    border-radius: 5px;
   }
 }
 
@@ -83,10 +84,10 @@ console.log(props.data, 'data..')
 .nav-bar-list {
   display: block;
   // margin-bottom: @space-ss;
-  // padding: 0 @space-l;
+  padding: 0 20px;
   height: 40px;
   line-height: 40px;
-  // border-radius: @radius-m;
+  color: rgba(30, 32, 37, 0.7);
   // color: @font-color-m;
   // transition: background-color @animatb;
 
@@ -106,29 +107,9 @@ console.log(props.data, 'data..')
 
   display: none;
   padding: 6px 12px;
-  // border: 1px solid @gray-1;
-  // border-radius: 0 @radius-s @radius-s 0;
   background: rgba(255 255 255 / 10%);
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-}
-
-/* stylelint-disable-next-line media-feature-range-notation */
-@media (max-width: 810px) {
-  .nav-bar {
-    position: fixed;
-    z-index: 120;
-    transform: translateX(calc(0px - var(--nav-bar-width)));
-    // transition: transform @animats;
-  }
-
-  .nav-bar-toggle {
-    display: block;
-  }
-
-  .nav-bar-show {
-    transform: translateX(0);
-  }
 }
 </style>

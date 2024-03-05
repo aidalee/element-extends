@@ -8,17 +8,16 @@ vue3+ts+pnpm mobile ui
 
 > 引用当前仓库本地的子包：先npm link生成软连接 再在需要的子包进行安装 pnpm add <pkgname>
 
-> 组件库在packages下的so-ui文件夹中，开发完成的组件执行编译（pnpm compile）后在examples文件中的组件文档中可以写文档和使用示例
+> 组件库在packages下的so-ui文件夹中，开发完成的组件执行编译（pnpm compile）后在demo文件夹中的组件文档中可以写文档和使用示例
 
-> 执行 pnpm build:docs 打包文档页面， 执行pnpm dev:docs查看组件说明文档
 
 > 最后组件测试没问题即可发布到npm上
 
 
-# 开发中的一些记录
+# 组件库架构开发中的一些记录
 https://xunzhaotech.gitee.io/kuaizhidao/pages/course/typescript/#%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9%E9%85%8D%E7%BD%AE
 
-@types/node 安装当前最高版本时 代码有对原生元素类型的报红提示，目前尚不知原因，暂时先安装了18.7.18的版本以消除这个报红
+@types/node 安装当前最高版本时 代码有对原生元素类型的警告提示，目前尚不知原因，暂时先安装了18.7.18的版本
 
 ## tab组件
 1. useChildren获取子组件
