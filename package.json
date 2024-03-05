@@ -2,6 +2,9 @@
   "version": "1.0.0-alpha.1709289037503",
   "private": true,
   "scripts": {
+    "dev:demo": "pnpm --filter demo dev",
+    "build:demo": "pnpm --filter demo build",
+    "preview:demo": "pnpm --filter demo preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint . --ext .js,.ts,.tsx,.vue",

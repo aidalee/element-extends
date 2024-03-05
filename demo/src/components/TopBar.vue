@@ -1,10 +1,3 @@
-<!--
- * @Author: please
- * @Date: 2024-02-29 17:55:03
- * @LastEditors: please
- * @LastEditTime: 2024-03-04 16:45:08
- * @Description: 请填写简介
--->
 <script lang="ts" setup>
 defineOptions({
   name: 'TopBar'
@@ -12,9 +5,9 @@ defineOptions({
 
 const navLinks = {
   '/': '指南',
+  '/develop': '开发',
   '/module': '组件'
 }
-const isDev = import.meta.env.DEV
 </script>
 
 <template>
