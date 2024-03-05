@@ -23,6 +23,7 @@ import TopBar from './components/TopBar.vue'
 import NavBar from './components/NavBar.vue'
 import SoUI from '@soterea-f2e/so-ui'
 import '@soterea-f2e/so-ui/es/style.css'
+import 'element-plus/dist/index.css'
 import { ElScrollbar, ElSpace, ElIcon, ElText } from 'element-plus'
 const app = createApp(App)
 

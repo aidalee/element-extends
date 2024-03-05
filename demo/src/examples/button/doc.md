@@ -1,29 +1,55 @@
-## SoButton 按钮
+# SoButton 按钮
 
-点击开启一个即时操作。
+### 介绍
+
+按钮用于触发一个操作，如提交表单。
+
+### 代码演示
+
+:::snippet
+按钮类型
+支持 `primary` 、`success` 、`warning`、`error`、`default`、`text` 6种类型，默认为`default`。
+<ButtonType/>
+:::
 
 :::snippet
 按钮形状
-按钮分为默认形状、`circle` 圆形、`round` 全圆角、`square` 正方形四种形状。
+支持 `round`、`circle`两种类型，默认为`round`。
 <ButtonShape/>
 :::
 
-### API
 
-通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：`type` -> `size` -> `shape` -> `status` -> `disabled`。
+:::snippet
+按钮大小
+有 `lg`、`md`、`sm`三种尺寸，默认为`md`。
+<ButtonSize/>
+:::
 
-| 参数     | 描述           | 类型                                            | 默认值  |
-| -------- | -------------- | ----------------------------------------------- | ------- |
-| type     | 按钮的类型     | 'primary' \| 'secondary' \| 'outline'           | primary |
-| shape    | 按钮的形状     | 'round' \| 'circle' \| 'square'                 | -       |
-| status   | 按钮的状态     | 'primary' \| 'success' \| 'warning' \| 'danger' | -       |
-| size     | 按钮的大小     | 's' \| 'm' \| 'l' \| 'xl'                       | `l`     |
-| disabled | 按钮是否被禁用 | boolean                                         | false   |
-| loading  | 按钮是否加载中 | boolean                                         | false   |
-| long     | 按钮是否通栏   | boolean                                         | false   |
+:::snippet
+自定义颜色
+通过`color`属性自定义按钮颜色
+<ButtonGradient/>
+:::
 
-#### Button Slots
+:::snippet
+禁用状态
+通过`disable`设置禁用状态
+<ButtonDisabled/>
+:::
 
-| 参数 | 描述 | 默认值 |
-| ---- | ---- | ------ |
-| icon | 图标 | -      |
+:::snippet
+朴素按钮
+通过`plain`设置
+<ButtonPlain/>
+:::
+
+## API
+
+### props
+
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| --- | --- | --- | --- | --- |
+| type | 类型 | _string_ | `primary` `success` `warning` `danger` `default` `text` | `default` |
+| size | 尺寸 | _string_ | `large` `middle` `small` | `middle` |
+| color | 自定义按钮颜色，支持 `linear-gradient` 渐变色 | _string_ | - | - |
+| delay | 延迟点击时间，单位 ms | _number_ | - | - |

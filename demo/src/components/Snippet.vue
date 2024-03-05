@@ -3,6 +3,7 @@ import { ref, getCurrentInstance } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { getHighlighter } from 'shikiji'
 import { CopyDocument, View } from '@element-plus/icons-vue'
+import { ElMessage } from 'element-plus'
 defineOptions({ name: 'SoSnippet' })
 
 const { copy } = useClipboard()
@@ -41,10 +42,9 @@ shiki.then(highlighter => {
 
 function onCopy() {
   copy(originCode)
-  proxy.$message({
+  ElMessage({
     message: '复制成功',
-    type: 'success',
-    duration: 1000
+    type: 'success'
   })
 }
 </script>

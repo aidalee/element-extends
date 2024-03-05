@@ -19,8 +19,12 @@ export default () => ({
         html: true,
         xhtmlOut: false
       })
+      debugger
       const snippetPattern = /:::snippet\s+(.*?)\s+:::/gs
       const matches = src.matchAll(snippetPattern)
+      console.log(src, '=====src')
+      console.log(matches, '=====')
+
       let importContent = ''
       for (const match of matches) {
         // parse three lines in snippet block

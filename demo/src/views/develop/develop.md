@@ -11,9 +11,9 @@ git clone ...
 
 > `demo` 文件夹是组件文档示例工程， `packages`文件夹下包含多个包， 其中 `so-ui` 用于存放编写的每个业务组件，每个组件都另起一个文件夹放在 `components`里
 
-> vue3 技术栈， 组件编写 可以 `jsx` 语法，也可以 `vue`模版语法。 每个组件的 `index.ts` 用于导出该组件
+> vue3 技术栈， 组件编写 可以 `jsx` 语法，也可以 `vue`模版语法。该项目里写了两个示例可以参考:`Button`和`EButton`。 每个组件的 `index.ts` 用于导出该组件.
 
-> 组件写完测试没问题可发包，镜像源切换到 soterea： http://nexus.soterea.cn/repository/soterea-npm/
+> 组件写完测试没问题可发包，镜像源要切换到 soterea： http://nexus.soterea.cn/repository/soterea-npm/
 
 
 
