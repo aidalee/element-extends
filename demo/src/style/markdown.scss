@@ -134,6 +134,12 @@
   }
   blockquote {
     margin-left: 0;
+    p {
+      code {
+        color: #4fc08d;
+        font-weight: bold;
+      }
+    }
   }
   .so-pure-doc {
     margin: 12px 0px 8px;
